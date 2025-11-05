@@ -82,7 +82,8 @@ class Zombie(Personaje):
     def _init_(self, vida:int, ataque:int, defensa:int, velocidad:float, categoría:str, habilidad:str, estado:bool, recursos:str, energía:int, color:str):
         super().__init__(vida, ataque, defensa, categoría, habilidad, estado)
         self.color = color
-        class Verde(Zombie):
+        
+class Verde(Zombie):
     def _init_(self, vida:int, ataque:int, defensa:int, velocidad:float, categoria:str, habilidad:str, estado:bool, recursos:str, energía:int, color:str):
         super().__init__(vida, ataque, defensa, velocidad, categoria, habilidad, estado, recursos, energía, color)
         self.vida = 100
