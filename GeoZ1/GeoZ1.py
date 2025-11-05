@@ -82,6 +82,41 @@ class Zombie(Personaje):
     def _init_(self, vida:int, ataque:int, defensa:int, velocidad:float, categoría:str, habilidad:str, estado:bool, recursos:str, energía:int, color:str):
         super().__init__(vida, ataque, defensa, categoría, habilidad, estado)
         self.color = color
+        class Verde(Zombie):
+    def _init_(self, vida:int, ataque:int, defensa:int, velocidad:float, categoria:str, habilidad:str, estado:bool, recursos:str, energía:int, color:str):
+        super().__init__(vida, ataque, defensa, velocidad, categoria, habilidad, estado, recursos, energía, color)
+        self.vida = 100
+        self.ataque = 40
+        self.defensa = self.vida * 0.2
+        self.velocidad = 3.5
+        self.categoria = "Normal"
+        self.habilidad = "Escupir" #Escupe una baba que baja las defensas
+        self.estado = False
+        self.color = "Verde"
+
+class Morado(Zombie):
+    def __init__(self, vida:int, ataque:int, defensa:float, velocidad:float, categoria:str, habilidad:str, estado:bool, color:str):
+        super().__init__(vida, ataque, defensa, velocidad, categoria, habilidad, estado, color)
+        self.vida = 150
+        self.ataque = 30
+        self.defensa = vida * 0.5
+        self.velocidad = 2.0
+        self.categoria = "Tanque"
+        self.habilidad = "Aplastar" #Aplasta a un civil, dejandolo aturdido
+        self.estado = True
+        self.color = "Morado"
+
+class Amarillo(Zombie):
+    def __init__(self, vida:int, ataque:int, defensa:float, velocidad:float, categoria:str, habilidad:str, estado:bool, color:str):
+        super().__init__(vida, ataque, defensa, velocidad, categoria, habilidad, estado, color)
+        self.vida = 80
+        self.ataque = 50
+        self.defensa = vida * 0.1
+        self.velocidad = 5.5
+        self.categoria = "Veloz"
+        self.habilidad = "Doble ataque" #Ataca dos veces en un turno
+        self.estado = True
+        self.color = "Amarillo"
         
         
 
