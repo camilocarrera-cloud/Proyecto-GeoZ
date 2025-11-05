@@ -1,4 +1,4 @@
-import wx
+import pygame
 import math
 import time
 
